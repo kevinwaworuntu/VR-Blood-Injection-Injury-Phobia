@@ -27,7 +27,6 @@ public class Level2 : HiddenObject
         else
         {
             StartCoroutine(StationStatusComplete());
-            //HiddenObjectCondition();
             SceneChangerObject();
             if (sceneChangerDetected == true)
             {

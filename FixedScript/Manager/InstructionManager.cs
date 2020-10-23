@@ -16,9 +16,13 @@ using UnityEngine;
     {
         StartCoroutine(coPreIntroInstruction());
     }
-    public void IntroInstruction()
+    public void IntroInstruction1()
     {
-        StartCoroutine(coIntroInstruction());
+        StartCoroutine(coIntroInstruction1());
+    }
+    public void IntroInstruction2()
+    {
+        StartCoroutine(coIntroInstruction2());
     }
     public void TutorialInstruction()
     {
@@ -63,7 +67,7 @@ using UnityEngine;
 
             instructionIsComplete = true;
     }
-    private IEnumerator coIntroInstruction()
+    private IEnumerator coIntroInstruction1()
     {
         instruksi.text = "";
         yield return new WaitForSeconds(5);
@@ -77,7 +81,31 @@ using UnityEngine;
         audioSource.Play();
         yield return new WaitForSeconds(5);
 
+        instruksi.text = kumpulanInstruksi[2];
+        audioSource.clip = audioInstruksi[2];
+        audioSource.Play();
+        yield return new WaitForSeconds(5);
+
+        instruksi.text = kumpulanInstruksi[3];
+        audioSource.clip = audioInstruksi[3];
+        audioSource.Play();
+        yield return new WaitForSeconds(5);
         instructionIsComplete = true;
+    }
+    // gadipake duli
+    private IEnumerator coIntroInstruction2()
+    {
+        instruksi.text = "";
+        yield return new WaitForSeconds(5);
+        instruksi.text = kumpulanInstruksi[2];
+        audioSource.clip = audioInstruksi[2];
+        audioSource.Play();
+        yield return new WaitForSeconds(5);
+
+        instruksi.text = kumpulanInstruksi[3];
+        audioSource.clip = audioInstruksi[3];
+        audioSource.Play();
+        yield return new WaitForSeconds(5);
     }
     private IEnumerator coTutorialInstruction()
     {

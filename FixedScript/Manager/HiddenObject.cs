@@ -64,7 +64,7 @@ public class HiddenObject : GameManager
         currItem = DetectOnTrigger.itemIndex;
         if(currItem == 7 && stationIsComplete==true)
         {
-            Destroy(uiManager.itemGameObject[6]);
+            Destroy(uiManager.sceneObject);
             currItem = 0;
             sceneChangerDetected = true;
             cm.canvasPosition.SetActive(false);
@@ -83,7 +83,8 @@ public class HiddenObject : GameManager
             uiManager.totalItem.text = "";
             uiManager.imageList[0].enabled = false;
             uiManager.imageList[1].enabled = false;
-            uiManager.itemGameObject[6].SetActive(false);
+            uiManager.itemGameObject[6].SetActive(false); // nanti comment ganti yang dibawah ini
+            uiManager.sceneObject.SetActive(false);
         }
 
             else {

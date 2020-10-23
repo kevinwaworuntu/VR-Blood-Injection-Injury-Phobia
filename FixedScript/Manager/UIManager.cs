@@ -12,5 +12,6 @@ public class UIManager : MonoBehaviour
     public GameObject[] itemGameObject;
     public Text totalItem;
     public Sprite completeImage;
+    public GameObject sceneObject;
 
 }

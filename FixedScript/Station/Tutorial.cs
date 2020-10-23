@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tutorial : HiddenObject
 {
-    //public InstructionManager iManager;
+    
     public SceneChanger sChanger;
 
     // Start is called before the first frame update
@@ -20,15 +20,14 @@ public class Tutorial : HiddenObject
         {
             cm.CBPosTutorial();
             SceneChangerObject();
-
         }
         else
         {
+            SceneChangerObject();
             if (sceneChangerDetected == true)
-
             {
                 sChanger.ChangeScene();
-                //stationIsComplete = false;
+                stationIsComplete = false;
             }
         }
     }
