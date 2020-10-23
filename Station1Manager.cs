@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class Station1Manager : HiddenObject
-{
+{/*
     void Start()
     {
         CheckTextList();
@@ -19,7 +19,7 @@ public class Station1Manager : HiddenObject
         if (stationIsComplete == false)
         {
             HiddenObjectCondition();
-            CanvasBagPosition();
+            //CanvasBagPosition();
             CheckTextList();
         }
         else
@@ -61,7 +61,7 @@ public class Station1Manager : HiddenObject
         }
 
     }
- 
+ /*
     public void CanvasBagPosition()
     {
         itemCollected = DetectOnTrigger.itemCollected;
@@ -111,7 +111,7 @@ public class Station1Manager : HiddenObject
                 j++;
             }
         }
-    }
+    }*/
 }
 
 

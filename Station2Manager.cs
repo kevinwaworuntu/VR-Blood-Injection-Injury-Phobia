@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Station2Manager : HiddenObject
-{   
+{
+    //public CollectorManager cm;
+    /*
     void Start()
     {
         CheckTextList();
-        StartCoroutine(InstructionText());
+        //StartCoroutine(InstructionText());
         //yield return new WaitForSeconds(instructionTime + 10.2f);
     }
 
@@ -18,7 +20,8 @@ public class Station2Manager : HiddenObject
         if (stationIsComplete == false)
         {
             HiddenObjectCondition();     
-            CanvasBagPosition();
+            //CanvasBagPosition();
+            //cm.CBPosLevel2();
             CheckTextList();
 
 
@@ -61,16 +64,16 @@ public class Station2Manager : HiddenObject
         }
         
     }
-   
+   /*
     public void CanvasBagPosition()
     {
         itemCollected = DetectOnTrigger.itemCollected;
-            /*
-            canvasPosition.transform.position = new Vector3(0.101f, 1.712f, -7.973f);
+         
+            //canvasPosition.transform.position = new Vector3(0.101f, 1.712f, -7.973f);
             //Reset Rotation to Zero
-            canvasPosition.transform.rotation = Quaternion.identity;
-            canvasPosition.transform.Rotate(0, 180, 0);
-            */
+            //canvasPosition.transform.rotation = Quaternion.identity;
+            //canvasPosition.transform.Rotate(0, 180, 0);
+            
             //bagPosition.SetActive(false);
        
         if(instructionIsComplete == true)
@@ -105,11 +108,11 @@ public class Station2Manager : HiddenObject
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
                 canvasPosition.transform.Rotate(0, -212.2f, 0);
-                /* canvasPosition.transform.position = new Vector3(-6.159f, 1.629f, -11.966f);
+                // canvasPosition.transform.position = new Vector3(-6.159f, 1.629f, -11.966f);
                  //Reset Rotation to Zero
-                 canvasPosition.transform.rotation = Quaternion.identity;
-                 canvasPosition.transform.Rotate(0, -87.936f, 0);
-                 */
+                 //canvasPosition.transform.rotation = Quaternion.identity;
+                 //canvasPosition.transform.Rotate(0, -87.936f, 0);
+                 
                 bagPosition.transform.position = new Vector3(-7.186f, 0.875f, -10.85f);
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
@@ -151,22 +154,22 @@ public class Station2Manager : HiddenObject
                 audioSource.clip = audioInstruksi[0];
                 audioSource.Play();
                 j++;
-            }/*
-            else if (itemCollected + j == 10)
-            {
-                Destroy(teleportPointStatus[4]);
-                teleportPointStatus[5].SetActive(true);
-                canvasPosition.transform.position = new Vector3(2.134f, 1.629f, -13.965f);
+            }
+            //else if (itemCollected + j == 10)
+            //{
+              //  Destroy(teleportPointStatus[4]);
+                //teleportPointStatus[5].SetActive(true);
+              //  canvasPosition.transform.position = new Vector3(2.134f, 1.629f, -13.965f);
                 //Reset Rotation to Zero
-                canvasPosition.transform.rotation = Quaternion.identity;
-                canvasPosition.transform.Rotate(0, -180.48f, 0);
+               // canvasPosition.transform.rotation = Quaternion.identity;
+               // canvasPosition.transform.Rotate(0, -180.48f, 0);
 
-                bagPosition.transform.position = new Vector3(2.771f, 0.854f, -13.298f);
+               // bagPosition.transform.position = new Vector3(2.771f, 0.854f, -13.298f);
                 //Reset Rotation to Zero
-                bagPosition.transform.rotation = Quaternion.identity;
-                bagPosition.transform.Rotate(90, 180, 232.928f);
+               // bagPosition.transform.rotation = Quaternion.identity;
+               // bagPosition.transform.Rotate(90, 180, 232.928f);
                 j++;
-            }*/
+            }
         }
-    }
+    }*/
 }

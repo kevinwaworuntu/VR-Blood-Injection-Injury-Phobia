@@ -6,6 +6,7 @@ using UnityEngine;
 public class StationPreIntro : GameManager
 {
     // Start is called before the first frame update
+    /*
     IEnumerator Start()
     {
         instruksi.text = "";
@@ -40,10 +41,6 @@ public class StationPreIntro : GameManager
         instruksi.text = "";
         instructionIsComplete = true;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    */
+   
 }

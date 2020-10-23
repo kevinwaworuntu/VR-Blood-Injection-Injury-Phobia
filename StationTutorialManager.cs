@@ -17,7 +17,7 @@ public class StationTutorialManager : GameManager
 
     protected bool sceneChangerDetected;
 
-
+    /*
     void Start()
     {
         StartCoroutine(InstructionText());
@@ -93,5 +93,5 @@ public class StationTutorialManager : GameManager
             //}
         }
     }
-
+    */
 }

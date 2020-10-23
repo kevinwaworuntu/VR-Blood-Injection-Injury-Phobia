@@ -9,7 +9,7 @@ public class StationFinal : GameManager
     [SerializeField] private Text textList;
     [SerializeField] private string textInstruksi;
    
-    
+    /*
     IEnumerator Start()
     {
         yield return new WaitForSeconds(1);
@@ -18,7 +18,7 @@ public class StationFinal : GameManager
     // Update is called once per frame
     void Update()
     {
-        if (instructionIsComplete) {
+        //if (instructionIsComplete) {
             countDownTimer();
         }
        
@@ -35,5 +35,5 @@ public class StationFinal : GameManager
             timeRemaining -= Time.deltaTime;
             textList.text = ((int)timeRemaining).ToString();
         }
-    }
+    }*/
 }

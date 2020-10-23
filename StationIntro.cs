@@ -13,7 +13,7 @@ public class StationIntro : GameManager
     protected float instructionTime2 = 1.0f;
    
     
-
+    /*
     IEnumerator Start()
     {
         instruksi.text = "";
@@ -53,7 +53,7 @@ public class StationIntro : GameManager
                 }
             }
 
-        }*/
+        }
         if (instructionIsComplete == true)
         {
             StartCoroutine(InstructionText());
@@ -71,7 +71,7 @@ public class StationIntro : GameManager
                 {
                     button[1].SetActive(true);
                 }
-            }*/
+            }
         }
         else
         {
@@ -94,9 +94,6 @@ public class StationIntro : GameManager
         button[1].SetActive(true);
 
 
-
-
-
     }
 
     public void ButtonClick()
@@ -109,5 +106,5 @@ public class StationIntro : GameManager
     {
         StartCoroutine(SceneChanger());
     }
-  
+  */
 }
