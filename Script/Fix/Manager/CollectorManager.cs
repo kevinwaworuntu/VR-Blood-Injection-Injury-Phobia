@@ -8,6 +8,7 @@ public class CollectorManager : MonoBehaviour
     public GameObject bagPosition;
     public GameObject[] teleportPointStatus;
     public InstructionManager iManager;
+    public UIManager uIManager;
     private int j = 0;
     protected static int itemCollected = 0, currItem = 0;
     
@@ -19,6 +20,9 @@ public class CollectorManager : MonoBehaviour
 
             if (itemCollected + j == 0)
             {
+                iManager.audioSource.clip = uIManager.itemAudio[0];
+                iManager.audioSource.Play();
+                teleportPointStatus[0].SetActive(true);
                 canvasPosition.transform.position = new Vector3(-9.728f, 1.551f, 2.047f);
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
@@ -32,8 +36,10 @@ public class CollectorManager : MonoBehaviour
             }
             else if (itemCollected + j == 3)
             {
-
-                //teleportPointStatus[1].SetActive(true);
+                iManager.audioSource.clip = uIManager.itemAudio[1];
+                iManager.audioSource.Play();
+                Destroy(teleportPointStatus[0]);
+                teleportPointStatus[1].SetActive(true);
                 canvasPosition.transform.position = new Vector3(-14.67f, 1.551f, 5.663f);
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
@@ -47,7 +53,10 @@ public class CollectorManager : MonoBehaviour
             }
             else if (itemCollected + j == 6)
             {
-                //teleportPointStatus[2].SetActive(true);
+                iManager.audioSource.clip = uIManager.itemAudio[2];
+                iManager.audioSource.Play();
+                Destroy(teleportPointStatus[1]);
+                teleportPointStatus[2].SetActive(true);
                 canvasPosition.transform.position = new Vector3(-12.522f, 1.551f, 9.576f);
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
@@ -77,8 +86,9 @@ public class CollectorManager : MonoBehaviour
 
             if (itemCollected + j == 0)
             {
-
-                //teleportPointStatus[1].SetActive(true);
+                iManager.audioSource.clip = uIManager.itemAudio[0];
+                iManager.audioSource.Play();
+                teleportPointStatus[0].SetActive(true);
                 canvasPosition.transform.position = new Vector3(-6.159f, 1.629f, -8.851f);
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
@@ -91,16 +101,19 @@ public class CollectorManager : MonoBehaviour
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
                 bagPosition.transform.Rotate(90f, 180f, 70.25199f);
-                iManager.audioSource.clip = iManager.audioInstruksi[0];
-                iManager.audioSource.Play();
+                
 
                 j++;
             }
             else if (itemCollected + j == 3)
             {
-                //Destroy(teleportPointStatus[1]);
-                //teleportPointStatus[2].SetActive(true);
+                iManager.audioSource.clip = uIManager.itemAudio[1];
+                iManager.audioSource.Play();
+
+                Destroy(teleportPointStatus[0]);
+                teleportPointStatus[1].SetActive(true);
                 canvasPosition.transform.position = new Vector3(-5.293f, 1.629f, -11.584f);
+
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
                 canvasPosition.transform.Rotate(0, -212.2f, 0);
@@ -113,15 +126,18 @@ public class CollectorManager : MonoBehaviour
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
                 bagPosition.transform.Rotate(90f, 180, 105.48f);
-                iManager.audioSource.clip = iManager.audioInstruksi[0];
-                iManager.audioSource.Play();
+          
                 j++;
             }
             else if (itemCollected + j == 6)
             {
-                //Destroy(teleportPointStatus[2]);
-                //teleportPointStatus[3].SetActive(true);
+                iManager.audioSource.clip = uIManager.itemAudio[2];
+                iManager.audioSource.Play();
+                
+                Destroy(teleportPointStatus[1]);
+                teleportPointStatus[2].SetActive(true);
                 canvasPosition.transform.position = new Vector3(-1.965f, 1.629f, -13.816f);
+
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
                 canvasPosition.transform.Rotate(0, -180.48f, 0);
@@ -130,15 +146,18 @@ public class CollectorManager : MonoBehaviour
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
                 bagPosition.transform.Rotate(90, 180, 232.928f);
-                iManager.audioSource.clip = iManager.audioInstruksi[0];
-                iManager.audioSource.Play();
+   
                 j++;
             }
             else if (itemCollected + j == 8)
             {
-               // Destroy(teleportPointStatus[3]);
-                //teleportPointStatus[4].SetActive(true);
+                iManager.audioSource.clip = uIManager.itemAudio[3];
+                iManager.audioSource.Play();
+
+                Destroy(teleportPointStatus[2]);
+                teleportPointStatus[3].SetActive(true);
                 canvasPosition.transform.position = new Vector3(6.206f, 1.615f, -10.887f);
+
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
                 canvasPosition.transform.Rotate(0, -234.422f, 0);
@@ -147,8 +166,7 @@ public class CollectorManager : MonoBehaviour
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
                 bagPosition.transform.Rotate(90, 180, 312.246f);
-                iManager.audioSource.clip = iManager.audioInstruksi[0];
-                iManager.audioSource.Play();
+       
                 j++;
             }/*
             else if (itemCollected + j == 10)

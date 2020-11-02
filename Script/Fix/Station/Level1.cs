@@ -39,7 +39,7 @@ public class Level1 : HiddenObject
         if (k == 0)
         {
 
-            iManager.audioSource.clip = iManager.audioInstruksi[0];
+            iManager.audioSource.clip = iManager.audioInstruksi[2];
             iManager.audioSource.Play();
             iManager.instruksi.text = iManager.kumpulanInstruksi[2];
 

@@ -6,7 +6,7 @@ public class Intro : GameManager
 {
     public InstructionManager iManager;
     public SceneChanger sceneChanger;
-    public GameObject button;
+    //public GameObject button;
    
 
     // Start is called before the first frame update
@@ -17,17 +17,11 @@ public class Intro : GameManager
 
     // Update is called once per frame
     void Update()
-    {   
-        if (iManager.instructionIsComplete == true)
-        { 
-            button.SetActive(true);
-            
-        }     
-     
-    }
-
-    public void ButtonClickSceneChanger()
     {
-        sceneChanger.ChangeScene();
+            if (iManager.instructionIsComplete == true)
+            {
+                sceneChanger.ChangeScene();
+
+            }      
     }
 }

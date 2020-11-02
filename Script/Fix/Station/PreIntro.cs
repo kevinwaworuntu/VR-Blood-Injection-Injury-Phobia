@@ -20,16 +20,8 @@ public class PreIntro : GameManager
     {
         if (iManager.instructionIsComplete == true)
         {
-            stationIsComplete = true;
-
-            if (stationIsComplete == false)
-            {
-
-            }
-            else
-            {
-                sceneChanger.ChangeScene();
-            }
+            sceneChanger.ChangeScene();
+         
         }
     }
 }

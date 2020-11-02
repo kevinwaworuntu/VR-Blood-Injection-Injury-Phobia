@@ -14,7 +14,7 @@ public class SceneChanger : MonoBehaviour
     {
 
         teleportVFx.Play();
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(8);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }

@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public Text[] textList;
     public Sprite[] itemImage;
     public string[] itemName;
+    public AudioClip[] itemAudio;
     public GameObject[] itemGameObject;
     public Text totalItem;
     public Sprite completeImage;

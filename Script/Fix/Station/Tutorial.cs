@@ -37,8 +37,8 @@ public class Tutorial : HiddenObject
                 }
                 else
                 {
-                   
-                    ButtonIsClicked();
+
+                    //ButtonIsClicked();
                     SceneChangerObject();
                 }
             }
@@ -49,9 +49,10 @@ public class Tutorial : HiddenObject
         }
     }
     //return bool if button Click
-    void ButtonClick()
+    public void ButtonClick()
     {
-        btnIsClicked = true;
+        //btnIsClicked = true;
+        iManager.TutorialInstruction3();
         iManager.btn[0].SetActive(false);
     }
     //Check if Button isClicked
