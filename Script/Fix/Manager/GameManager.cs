@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     */
    // public ParticleSystem teleportVFx;
 
-    public bool stationIsComplete = false;
+    [SerializeField] protected bool stationIsComplete = false;
 
     /*
     protected virtual IEnumerator SceneChanger()

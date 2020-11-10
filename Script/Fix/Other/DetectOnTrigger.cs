@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class DetectOnTrigger : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem visualEffect;
-    //[SerializeField] private AudioSource audioSourceSFX;
+    [SerializeField] private ParticleSystem visualEffect; // nanti hapus
     [SerializeField] private UnityEvent correctItem, wrongItem;
     
     public static int itemIndex;
@@ -66,7 +65,7 @@ public class DetectOnTrigger : MonoBehaviour
            
     
            
-    }
+    } // nanti dihapus
     public void VisualEffect()
     {
         visualEffect.Play();

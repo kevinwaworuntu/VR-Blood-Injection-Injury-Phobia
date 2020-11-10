@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectorManager : MonoBehaviour
 {
     public GameObject canvasPosition;
+    public GameObject[] tutorialCanvas;
     public GameObject bagPosition;
     public GameObject[] teleportPointStatus;
     public InstructionManager iManager;
@@ -192,19 +193,21 @@ public class CollectorManager : MonoBehaviour
         if (iManager.instructionIsComplete == true)
         {
             teleportPointStatus[0].SetActive(true);
-            //if (itemCollected + j == 0)
-            //{
             canvasPosition.transform.position = new Vector3(13.855f, 1.716f, 1.823f);
             //Reset Rotation to Zero
             canvasPosition.transform.rotation = Quaternion.identity;
             canvasPosition.transform.Rotate(0, 226f, 0);
 
+            tutorialCanvas[0].transform.position = new Vector3(15.011f, 1.54f, 0.486f);
+            //Reset Rotation to Zero
+            tutorialCanvas[0].transform.rotation = Quaternion.identity;
+            tutorialCanvas[0].transform.Rotate(0, -10.55f, 0);
+
             bagPosition.transform.position = new Vector3(13.319f, 0.844f, 2.947f);
             //Reset Rotation to Zero
             bagPosition.transform.rotation = Quaternion.identity;
             bagPosition.transform.Rotate(90, 180, 80);
-            //  j++;
-            //}
+
         }
     }
 }

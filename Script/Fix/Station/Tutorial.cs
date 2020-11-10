@@ -1,17 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
+// This script won't work without a VideoPlayer present,
+// so let's ask Unity to enforce that relationship for us.
+[RequireComponent(typeof(VideoPlayer))]
 public class Tutorial : HiddenObject
 {
     public static int teleportDetected;
-    public SceneChanger sChanger;
-    public bool btnIsClicked = false;
+    public SceneChanger sceneChanger;
+    [SerializeField] private VideoClip[] vTutorial;
+    [SerializeField] private VideoPlayer vPlayerKanan;
+    [SerializeField] private VideoPlayer vPlayerKiri;
+
 
     // Start is called before the first frame update
     void Start()
     {
         iManager.TutorialInstruction1();
+        vPlayerKanan.clip = vTutorial[0];
+        vPlayerKanan.Play();
+        vPlayerKiri.clip = vTutorial[3];
+        vPlayerKiri.Play();
     }
 
     // Update is called once per frame
@@ -31,14 +42,17 @@ public class Tutorial : HiddenObject
                 if (sceneChangerDetected == true)
                 {
 
-                    sChanger.ChangeScene();
+                    sceneChanger.ChangeScene();
+                    cm.canvasPosition.SetActive(true);
                     iManager.TutorialInstruction4();
-                    stationIsComplete = false;
+                    Destroy(vPlayerKanan);
+                    cm.tutorialCanvas[0].SetActive(false);
+                    iManager.instructionIsComplete = false;
                 }
                 else
                 {
 
-                    //ButtonIsClicked();
+                    ButtonPushed();
                     SceneChangerObject();
                 }
             }
@@ -48,20 +62,16 @@ public class Tutorial : HiddenObject
 
         }
     }
-    //return bool if button Click
-    public void ButtonClick()
-    {
-        //btnIsClicked = true;
-        iManager.TutorialInstruction3();
-        iManager.btn[0].SetActive(false);
-    }
-    //Check if Button isClicked
-    void ButtonIsClicked()
-    {
-        if (btnIsClicked == true)
-        {
-            iManager.TutorialInstruction3(); // nanti pindahin ke ButtonClick kalo mau dicoba di Quest
-            btnIsClicked = false;
+    //return bool if button Pushed
+    public void ButtonPushed()
+    { if (ControllableReactor1.isPushed == true)
+        {           
+            iManager.TutorialInstruction3();
+            vPlayerKanan.clip = vTutorial[2];
+            vPlayerKanan.Play();
+            vPlayerKiri.clip = vTutorial[5];
+            vPlayerKiri.Play();
+            ControllableReactor1.isPushed = false;
         }
     }
     //Check if Player move to Teleport Point
@@ -72,6 +82,10 @@ public class Tutorial : HiddenObject
         {
             stationIsComplete = true;
             iManager.TutorialInstruction2();
+            vPlayerKanan.clip = vTutorial[1];
+            vPlayerKanan.Play();
+            vPlayerKiri.clip = vTutorial[4];
+            vPlayerKiri.Play();
             cm.teleportPointStatus[0].SetActive(false);
             teleportDetected = 0;
         }

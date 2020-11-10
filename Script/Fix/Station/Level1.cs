@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level1 : HiddenObject
 {
-    public SceneChanger sChanger;
+    public SceneChanger sceneChanger;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +24,10 @@ public class Level1 : HiddenObject
         else
         {
             StartCoroutine(StationStatusComplete());
-            //HiddenObjectCondition();
             SceneChangerObject();
             if (sceneChangerDetected == true)
             {
-                sChanger.ChangeScene();
+                sceneChanger.ChangeScene();
                 stationIsComplete = false;
             }
 
@@ -47,10 +46,10 @@ public class Level1 : HiddenObject
         }
         else if (k == 1)
         {
-            uiManager.itemGameObject[6].SetActive(true);
+            uIManager.itemGameObject[6].SetActive(true);
             yield return new WaitForSeconds(iManager.audioSource.clip.length);
             iManager.instruksi.text = iManager.kumpulanInstruksi[3];
-            iManager.audioSource.clip = iManager.audioInstruksi[1];
+            iManager.audioSource.clip = iManager.audioInstruksi[3];
             iManager.audioSource.Play();
             k++;
         }

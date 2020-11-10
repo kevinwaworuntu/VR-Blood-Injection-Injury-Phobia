@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class ResetPosition : MonoBehaviour
     private Quaternion originalRotationValue;
     private bool hitGround = false;
 
-    void start()
+    void Start()
     {
         originalRotationValue = transform.rotation;
     }

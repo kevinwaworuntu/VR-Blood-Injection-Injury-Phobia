@@ -11,7 +11,7 @@ using UnityEngine;
         public string[] kumpulanInstruksi;
         public AudioSource audioSource;
         public AudioClip[] audioInstruksi;
-        public GameObject[] btn;
+       
 
     public void PreIntroInstruction()
     {
@@ -48,6 +48,10 @@ using UnityEngine;
     public void FinalInstruction()
     {
         StartCoroutine(coFinalInstruction());
+    }
+    public void MenuInstruction()
+    {
+        StartCoroutine(coMenuInstruction());
     }
     private IEnumerator coPreIntroInstruction()
     {
@@ -159,7 +163,7 @@ using UnityEngine;
         instruksi.text = kumpulanInstruksi[3];
         audioSource.clip = audioInstruksi[3];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length + 7);
         instruksi.text = kumpulanInstruksi[4];
         audioSource.clip = audioInstruksi[4];
         audioSource.Play();
@@ -167,38 +171,35 @@ using UnityEngine;
         instruksi.text = kumpulanInstruksi[5];
         audioSource.clip = audioInstruksi[5];
         audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length + 1);
         instructionIsComplete = true;
     }
     private IEnumerator coTutorialInstruction2()
     {
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
         instruksi.text = kumpulanInstruksi[6];
         audioSource.clip = audioInstruksi[6];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length);
         instruksi.text = kumpulanInstruksi[7];
         audioSource.clip = audioInstruksi[7];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
-        btn[0].SetActive(true);
+       // btn[0].SetActive(true);
 
     }
     private IEnumerator coTutorialInstruction3()
     {
-        instruksi.text = "";
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
         instruksi.text = kumpulanInstruksi[8];
         audioSource.clip = audioInstruksi[8];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length);
         instruksi.text = kumpulanInstruksi[9];
         audioSource.clip = audioInstruksi[9];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length + 1);
         instruksi.text = kumpulanInstruksi[10];
         audioSource.clip = audioInstruksi[10];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length + 1);
         instruksi.text = kumpulanInstruksi[11];
         audioSource.clip = audioInstruksi[11];
         audioSource.Play();
@@ -207,10 +208,11 @@ using UnityEngine;
     }
     private IEnumerator coTutorialInstruction4()
     {
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        
         instruksi.text = kumpulanInstruksi[12];
-        audioSource.clip = audioInstruksi[0];
+        audioSource.clip = audioInstruksi[12];
         audioSource.Play();
+        yield return new WaitForSeconds(1);
 
     }
     private IEnumerator coHiddenObjectInstruction()
@@ -259,7 +261,7 @@ using UnityEngine;
         instructionIsComplete = true;
 
         //Tunggu Waktu sesuai timer
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(45);
         instruksi.text = kumpulanInstruksi[5];
         audioSource.clip = audioInstruksi[5];
         audioSource.Play();
@@ -271,5 +273,37 @@ using UnityEngine;
         instruksi.text = kumpulanInstruksi[7];
         audioSource.clip = audioInstruksi[7];
         audioSource.Play();
+    }
+    private IEnumerator coMenuInstruction()
+    {
+
+        instruksi.text = kumpulanInstruksi[0];
+        audioSource.clip = audioInstruksi[0];
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        instruksi.text = kumpulanInstruksi[1];
+        audioSource.clip = audioInstruksi[1];
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        instruksi.text = kumpulanInstruksi[2];
+        audioSource.clip = audioInstruksi[2];
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        instruksi.text = kumpulanInstruksi[3];
+        audioSource.clip = audioInstruksi[3];
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        instruksi.text = kumpulanInstruksi[4];
+        audioSource.clip = audioInstruksi[4];
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        instruksi.text = kumpulanInstruksi[1];
+        instructionIsComplete = true;
+
     }
 }

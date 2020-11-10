@@ -9,13 +9,13 @@ public class HiddenObject : GameManager
 
     //public GameObject[] teleportPointStatus;
 
-    protected int i = 0, j = 0, k = 0;
+    protected int i = 0, j = 0, k = 0; 
     protected static int itemCollected = 0;
     protected static int currItem = 0;
     protected bool sceneChangerDetected;
     public InstructionManager iManager;
     public CollectorManager cm;
-    public UIManager uiManager;
+    public UIManager uIManager;
     public DetectOnTrigger dOT;
 
     public void HiddenObjectCondition()
@@ -26,34 +26,34 @@ public class HiddenObject : GameManager
             {
                
                 case 1:
-                    Destroy(uiManager.itemGameObject[0]);
-                uiManager.textList[0].text = "";
-                uiManager.imageList[0].sprite = uiManager.completeImage;
+                    Destroy(uIManager.itemGameObject[0]);
+                uIManager.textList[0].text = "";
+                uIManager.imageList[0].sprite = uIManager.completeImage;
                     break;
                 case 2:
-                    Destroy(uiManager.itemGameObject[1]);
-                uiManager.textList[1].text = "";
-                uiManager.imageList[1].sprite = uiManager.completeImage;
+                    Destroy(uIManager.itemGameObject[1]);
+                uIManager.textList[1].text = "";
+                uIManager.imageList[1].sprite = uIManager.completeImage;
                     break;
                 case 3:
-                    Destroy(uiManager.itemGameObject[2]);
-                uiManager.textList[0].text = "";
-                uiManager.imageList[0].sprite = uiManager.completeImage;
+                    Destroy(uIManager.itemGameObject[2]);
+                uIManager.textList[0].text = "";
+                uIManager.imageList[0].sprite = uIManager.completeImage;
                     break;
                 case 4:
-                    Destroy(uiManager.itemGameObject[3]);
-                uiManager.textList[1].text = "";
-                uiManager.imageList[1].sprite = uiManager.completeImage;
+                    Destroy(uIManager.itemGameObject[3]);
+                uIManager.textList[1].text = "";
+                uIManager.imageList[1].sprite = uIManager.completeImage;
                     break;
                 case 5:
-                    Destroy(uiManager.itemGameObject[4]);
-                uiManager.textList[0].text = "";
-                uiManager.imageList[0].sprite = uiManager.completeImage;
+                    Destroy(uIManager.itemGameObject[4]);
+                uIManager.textList[0].text = "";
+                uIManager.imageList[0].sprite = uIManager.completeImage;
                     break;
                 case 6:
-                    Destroy(uiManager.itemGameObject[5]);
-                uiManager.textList[1].text = "";
-                uiManager.imageList[1].sprite = uiManager.completeImage;
+                    Destroy(uIManager.itemGameObject[5]);
+                uIManager.textList[1].text = "";
+                uIManager.imageList[1].sprite = uIManager.completeImage;
                     break;
                        
         }
@@ -64,7 +64,7 @@ public class HiddenObject : GameManager
         currItem = DetectOnTrigger.itemIndex;
         if(currItem == 7 && stationIsComplete==true)
         {
-            Destroy(uiManager.sceneObject);
+            Destroy(uIManager.sceneObject);
             currItem = 0;
             sceneChangerDetected = true;
             cm.canvasPosition.SetActive(false);
@@ -78,49 +78,49 @@ public class HiddenObject : GameManager
             itemCollected = DetectOnTrigger.itemCollected;
             if (iManager.instructionIsComplete == false)
             {
-            uiManager.textList[0].text = "";
-            uiManager.textList[1].text = "";
-            uiManager.totalItem.text = "";
-            uiManager.imageList[0].enabled = false;
-            uiManager.imageList[1].enabled = false;
-            uiManager.itemGameObject[6].SetActive(false); // nanti comment ganti yang dibawah ini
-            uiManager.sceneObject.SetActive(false);
+            uIManager.textList[0].text = "";
+            uIManager.textList[1].text = "";
+            uIManager.totalItem.text = "";
+            uIManager.imageList[0].enabled = false;
+            uIManager.imageList[1].enabled = false;
+            uIManager.itemGameObject[6].SetActive(false); // nanti comment ganti yang dibawah ini
+            uIManager.sceneObject.SetActive(false);
         }
 
             else {
 
-            uiManager.imageList[0].enabled = true;
-            uiManager.imageList[1].enabled = true;
+            uIManager.imageList[0].enabled = true;
+            uIManager.imageList[1].enabled = true;
                 iManager.title.text = "TEMUKAN";
-            uiManager.totalItem.text = itemCollected + "/6";
+            uIManager.totalItem.text = itemCollected + "/6";
 
                 switch (itemCollected)
                 {
                 case 0:
-                    uiManager.textList[0].text = uiManager.itemName[itemCollected];
-                    uiManager.textList[1].text = uiManager.itemName[itemCollected+1];
-                    uiManager.imageList[0].sprite = uiManager.itemImage[itemCollected];
-                    uiManager.imageList[1].sprite = uiManager.itemImage[itemCollected+1];
+                    uIManager.textList[0].text = uIManager.itemName[itemCollected];
+                    uIManager.textList[1].text = uIManager.itemName[itemCollected+1];
+                    uIManager.imageList[0].sprite = uIManager.itemImage[itemCollected];
+                    uIManager.imageList[1].sprite = uIManager.itemImage[itemCollected+1];
                     break;
                 case 2:
-                    uiManager.textList[0].text = uiManager.itemName[itemCollected];
-                    uiManager.textList[1].text = uiManager.itemName[itemCollected+1];
-                    uiManager.imageList[0].sprite = uiManager.itemImage[itemCollected];
-                    uiManager.imageList[1].sprite = uiManager.itemImage[itemCollected+1];
+                    uIManager.textList[0].text = uIManager.itemName[itemCollected];
+                    uIManager.textList[1].text = uIManager.itemName[itemCollected+1];
+                    uIManager.imageList[0].sprite = uIManager.itemImage[itemCollected];
+                    uIManager.imageList[1].sprite = uIManager.itemImage[itemCollected+1];
                     break;
                 case 4:
-                    uiManager.textList[0].text = uiManager.itemName[itemCollected];
-                    uiManager.textList[1].text = uiManager.itemName[itemCollected + 1];
-                    uiManager.imageList[0].sprite = uiManager.itemImage[itemCollected];
-                    uiManager.imageList[1].sprite = uiManager.itemImage[itemCollected + 1];
+                    uIManager.textList[0].text = uIManager.itemName[itemCollected];
+                    uIManager.textList[1].text = uIManager.itemName[itemCollected + 1];
+                    uIManager.imageList[0].sprite = uIManager.itemImage[itemCollected];
+                    uIManager.imageList[1].sprite = uIManager.itemImage[itemCollected + 1];
                     break;
                 case 6:
-                    uiManager.textList[0].text = "";
-                    uiManager.textList[1].text = "";
-                    uiManager.imageList[0].enabled = false;
-                    uiManager.imageList[1].enabled = false;
+                    uIManager.textList[0].text = "";
+                    uIManager.textList[1].text = "";
+                    uIManager.imageList[0].enabled = false;
+                    uIManager.imageList[1].enabled = false;
 
-                    uiManager.totalItem.text = "";
+                    uIManager.totalItem.text = "";
                     stationIsComplete = true;
                     break;
             }

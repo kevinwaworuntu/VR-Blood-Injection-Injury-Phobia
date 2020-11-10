@@ -6,11 +6,12 @@ using UnityEngine;
 public class Final : GameManager
 {
     public InstructionManager iManager;
-    [SerializeField] private Light lightToFade;
-    [SerializeField] private float timeRemaining = 30f;
+    public SceneChanger sceneChanger;
+    [SerializeField] private GameObject[] lightToFade;
+    [SerializeField] private float timeRemaining = 45f;
     [SerializeField] private Text timer;
     [SerializeField] private GameObject[] wall;
-    [SerializeField] private GameObject vFX;
+    [SerializeField] private GameObject[] vFX;
     
     void Start()
     {
@@ -25,8 +26,14 @@ public class Final : GameManager
             if (stationIsComplete == false)
             {
                 countDownTimer();
-                vFX.SetActive(true);
-                lightToFade.intensity = 0;
+                vFX[0].SetActive(true);
+                vFX[1].SetActive(true);
+                //lightToFade[0].intensity = 0;
+                lightToFade[0].SetActive(false);
+                lightToFade[1].SetActive(true);
+                lightToFade[2].SetActive(true);
+                lightToFade[3].SetActive(true);
+                lightToFade[4].SetActive(true);
                 wall[0].transform.Translate(Vector3.down * Time.deltaTime, Space.World);
                 wall[1].transform.Translate(Vector3.down * Time.deltaTime, Space.World);
                 wall[2].transform.Translate(Vector3.down * Time.deltaTime, Space.World);
@@ -40,6 +47,7 @@ public class Final : GameManager
             else
             {
                 timer.text = "";
+                sceneChanger.ChangeSceneFinal();
             }
             
         }    
