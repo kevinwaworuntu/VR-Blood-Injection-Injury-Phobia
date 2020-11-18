@@ -11,6 +11,8 @@ using UnityEngine;
         public string[] kumpulanInstruksi;
         public AudioSource audioSource;
         public AudioClip[] audioInstruksi;
+        [SerializeField] private Animator[] anim;
+        [SerializeField] private GameObject[] gObjects;
        
 
     public void PreIntroInstruction()
@@ -97,36 +99,47 @@ using UnityEngine;
         instruksi.text = "";
         yield return new WaitForSeconds(3);
 
+        anim[0].SetInteger("Kondisi", 1);
         instruksi.text = kumpulanInstruksi[0];
         audioSource.clip = audioInstruksi[0];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length+0.5f);
 
+        anim[0].SetInteger("Kondisi", 2);
         instruksi.text = kumpulanInstruksi[1];
         audioSource.clip = audioInstruksi[1];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        
+        yield return new WaitForSeconds(audioSource.clip.length);
 
+        anim[0].SetInteger("Kondisi", 3);
         instruksi.text = kumpulanInstruksi[2];
         audioSource.clip = audioInstruksi[2];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length+0.5f);
 
+        anim[0].SetInteger("Kondisi", 4);
         instruksi.text = kumpulanInstruksi[3];
         audioSource.clip = audioInstruksi[3];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        
+        yield return new WaitForSeconds(audioSource.clip.length);
 
+        anim[0].SetInteger("Kondisi", 0);
+        yield return new WaitForSeconds(1);
+
+        anim[0].SetInteger("Kondisi", 5);
         instruksi.text = kumpulanInstruksi[4];
         audioSource.clip = audioInstruksi[4];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length);
 
+        anim[0].SetInteger("Kondisi", 6);
         instruksi.text = kumpulanInstruksi[5];
         audioSource.clip = audioInstruksi[5];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
-
+        yield return new WaitForSeconds(audioSource.clip.length-1.1f);
+        anim[0].SetInteger("Kondisi", 0);
         instructionIsComplete = true;
     }
     // gadipake dulu
@@ -171,6 +184,7 @@ using UnityEngine;
         instruksi.text = kumpulanInstruksi[5];
         audioSource.clip = audioInstruksi[5];
         audioSource.Play();
+        gObjects[0].SetActive(true);
         yield return new WaitForSeconds(audioSource.clip.length + 1);
         instructionIsComplete = true;
     }
@@ -237,42 +251,63 @@ using UnityEngine;
     private IEnumerator coFinalInstruction()
     {
         instruksi.text = "";
+        yield return new WaitForSeconds(3);
+
+        anim[0].SetInteger("Kondisi", 1);
         instruksi.text = kumpulanInstruksi[0];
         audioSource.clip = audioInstruksi[0];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        anim[0].SetInteger("Kondisi", 2);
         instruksi.text = kumpulanInstruksi[1];
         audioSource.clip = audioInstruksi[1];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length-0.3f);
+
+        anim[0].SetInteger("Kondisi", 3);
         instruksi.text = kumpulanInstruksi[2];
         audioSource.clip = audioInstruksi[2];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        anim[0].SetInteger("Kondisi", 4);
         instruksi.text = kumpulanInstruksi[3];
         audioSource.clip = audioInstruksi[3];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        anim[0].SetInteger("Kondisi", 5);
         instruksi.text = kumpulanInstruksi[4];
         audioSource.clip = audioInstruksi[4];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
-        instruksi.text = "";
-        instructionIsComplete = true;
+        yield return new WaitForSeconds(audioSource.clip.length);
 
-        //Tunggu Waktu sesuai timer
-        yield return new WaitForSeconds(45);
+        anim[0].SetInteger("Kondisi", 0);
+        instruksi.text = "";
+        instructionIsComplete = true;    
+        yield return new WaitForSeconds(45); //Tunggu Waktu sesuai timer
+
+        anim[0].SetInteger("Kondisi", 6);
         instruksi.text = kumpulanInstruksi[5];
         audioSource.clip = audioInstruksi[5];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length+0.15f);
+
+        anim[0].SetInteger("Kondisi", 7);
         instruksi.text = kumpulanInstruksi[6];
         audioSource.clip = audioInstruksi[6];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length + 2);
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        anim[0].SetInteger("Kondisi", 8);
         instruksi.text = kumpulanInstruksi[7];
         audioSource.clip = audioInstruksi[7];
         audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        anim[0].SetInteger("Kondisi", 0);
+
     }
     private IEnumerator coMenuInstruction()
     {

@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 12f70d433dea41649a79ef41da765703
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 2126247329107588601
+    second: metarig|Final_0
+  - first:
+      74: 7116748958845008956
+    second: metarig|Final_1
+  - first:
+      74: -1682434833050391850
+    second: metarig|Final_2
+  - first:
+      74: -3636614144081437310
+    second: metarig|Final_3
+  - first:
+      74: 5683970679149097728
+    second: metarig|Final_4
+  - first:
+      74: -1045648932939815076
+    second: metarig|Final_5
+  - first:
+      74: 5869210451339141218
+    second: metarig|Final_6
+  - first:
+      74: -2877832660339582010
+    second: metarig|Final_7
+  - first:
+      74: -1982111936628101929
+    second: metarig|Intro_0
+  - first:
+      74: -2267315480033561093
+    second: metarig|Intro_1
+  - first:
+      74: 6026098637027781097
+    second: metarig|Intro_2
+  - first:
+      74: 8550104821272865371
+    second: metarig|Intro_3
+  - first:
+      74: -1850105754983624432
+    second: metarig|Intro_4
+  - first:
+      74: -6531806595110013288
+    second: metarig|Intro_5
+  - first:
+      74: -6618646296196768696
+    second: metarig|mulut
+  - first:
+      74: 3030839026342221096
+    second: metarig|mulut sedih
+  - first:
+      74: 6738210486397699628
+    second: metarig|tangan
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: badan
+    second: {fileID: 2100000, guid: 9ceee3c8e1955944ebd6e67842fe62ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baju
+    second: {fileID: 2100000, guid: 8e93c7c476af24343b7cf6d6ce300660, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bulu mata
+    second: {fileID: 2100000, guid: d9446a3f732f1414fa377018b9c0ed3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gigi
+    second: {fileID: 2100000, guid: 9ead6d111bb734b4393e3666325a88fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kaki
+    second: {fileID: 2100000, guid: 02686048756df9e41a02597dbda3081b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kepala
+    second: {fileID: 2100000, guid: 0e9620ad79a59544b8305f42366d42a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mata
+    second: {fileID: 2100000, guid: 8debfd003c4bb2a42a4c773404b221cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rambut
+    second: {fileID: 2100000, guid: 889c5999ed019d942bbd45888f8eb970, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

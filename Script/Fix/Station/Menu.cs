@@ -7,6 +7,7 @@ public class Menu : GameManager
     
     public SceneChanger sceneChanger;
     public InstructionManager iManager;
+    [SerializeField] private GameObject tutorialCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class Menu : GameManager
      
         if (iManager.instructionIsComplete == true)
         {
+            tutorialCanvas.SetActive(true);
             ButtonPushed1();
             ButtonPushed2();
             ButtonPushed3();
