@@ -1,31 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine;
+﻿using UnityEngine;
 
+//Class yang akan digunakan pada hampir setiap class
 public class GameManager : MonoBehaviour
 
-{/*
-    public Text title;
-    public bool instructionIsComplete = false;
-    public Text instruksi;
-    public string[] kumpulanInstruksi;
-    public AudioSource audioSource;
-    public AudioClip[] audioInstruksi;
-    */
-   // public ParticleSystem teleportVFx;
-
+{
     [SerializeField] protected bool stationIsComplete = false;
-
-    /*
-    protected virtual IEnumerator SceneChanger()
-    {
-
-        teleportVFx.Play();
-        yield return new WaitForSeconds(10);    
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-    }*/
 
 }

@@ -1,6 +1,4 @@
-﻿ using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ResetPosition : MonoBehaviour
 {
@@ -16,12 +14,8 @@ public class ResetPosition : MonoBehaviour
     }
     void Update()
     {
-        if (hitGround==true)
-        {
-            
-            hitGround = false;
+        if (hitGround==true) hitGround = false;
 
-        }
     }
     private void OnTriggerEnter(Collider other)
     {

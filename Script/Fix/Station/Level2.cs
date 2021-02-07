@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Level2 : HiddenObject
@@ -49,7 +48,7 @@ public class Level2 : HiddenObject
         else if (k == 1)
         {
             uIManager.itemGameObject[6].SetActive(true);
-            yield return new WaitForSeconds(iManager.audioSource.clip.length);
+            yield return new WaitForSeconds(iManager.audioSource.clip.length+1);
             iManager.instruksi.text = iManager.kumpulanInstruksi[3];
             iManager.audioSource.clip = iManager.audioInstruksi[3];
             iManager.audioSource.Play();

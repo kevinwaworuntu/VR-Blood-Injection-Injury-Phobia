@@ -1,5 +1,4 @@
 ﻿    using UnityEngine;
-    using UnityEngine.UI;
     using VRTK.Controllables;
 
     public class ControllableReactor1 : MonoBehaviour

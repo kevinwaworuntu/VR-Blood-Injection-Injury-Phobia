@@ -1,13 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine;
-
-public class HiddenObject : GameManager
+﻿public class HiddenObject : GameManager
 {
-
-    //public GameObject[] teleportPointStatus;
 
     protected int i = 0, j = 0, k = 0; 
     protected static int itemCollected = 0;
@@ -18,6 +10,8 @@ public class HiddenObject : GameManager
     public UIManager uIManager;
     public DetectOnTrigger dOT;
 
+    //Fungsi yang akan dipanggil apabila benda tersebunyi ditemukan dan dimasukan kedalam tas
+    //Apabila benda tersembunyi ditemukan maka gameObject tersebut akan di destroy dan foto benda akan diganti menjadi gambar centang
     public void HiddenObjectCondition()
     {
         currItem = DetectOnTrigger.itemIndex;
@@ -59,6 +53,7 @@ public class HiddenObject : GameManager
         }
     }
 
+    //Fungsi yang akan dipanggil apabila sceneChanger object dimasukan kedalam tas
     public void SceneChangerObject()
     {
         currItem = DetectOnTrigger.itemIndex;
@@ -71,8 +66,7 @@ public class HiddenObject : GameManager
         }
     }
    
-    
-
+    //Fungsi untuk menampilkan foto dan gambar  benda yang harus dicari
     public void CheckTextList()
           {
             itemCollected = DetectOnTrigger.itemCollected;
@@ -83,7 +77,6 @@ public class HiddenObject : GameManager
             uIManager.totalItem.text = "";
             uIManager.imageList[0].enabled = false;
             uIManager.imageList[1].enabled = false;
-            uIManager.itemGameObject[6].SetActive(false); // nanti comment ganti yang dibawah ini
             uIManager.sceneObject.SetActive(false);
         }
 

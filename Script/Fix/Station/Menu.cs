@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Menu : GameManager
 {
     
     public SceneChanger sceneChanger;
     public InstructionManager iManager;
+    [SerializeField] private GameObject instructionCanvas;
     [SerializeField] private GameObject tutorialCanvas;
 
     // Start is called before the first frame update
@@ -23,6 +22,7 @@ public class Menu : GameManager
      
         if (iManager.instructionIsComplete == true)
         {
+            instructionCanvas.SetActive(false);
             tutorialCanvas.SetActive(true);
             ButtonPushed1();
             ButtonPushed2();
@@ -69,5 +69,4 @@ public class Menu : GameManager
             ControllableReactor3.isPushed = false;
         }
     }
-
 }

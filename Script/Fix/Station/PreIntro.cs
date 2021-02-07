@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
-public class PreIntro : GameManager
+﻿public class PreIntro : GameManager
 {
     public InstructionManager iManager;
     public SceneChanger sceneChanger;

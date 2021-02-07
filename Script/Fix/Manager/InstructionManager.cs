@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -55,16 +54,18 @@ using UnityEngine;
     {
         StartCoroutine(coMenuInstruction());
     }
+    // Fungsi coroutine merupakan fungsi yang dapat memberikan delay dalam mengeksekusi perintah
+    // Fungsi coroutine disini digunakan menyocokan subtitle dengan suara yang ada
     private IEnumerator coPreIntroInstruction()
     {
             instruksi.text = "";
             title.text = "";
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(3); // menunggu selama 3 detik
 
             instruksi.text = kumpulanInstruksi[0];
             audioSource.clip = audioInstruksi[0];
             audioSource.Play();
-            yield return new WaitForSeconds(audioSource.clip.length + 2);
+            yield return new WaitForSeconds(audioSource.clip.length + 2); // menunggu sampai audio selesai diputar + 2 detik
 
             instruksi.text = kumpulanInstruksi[1];
             audioSource.clip = audioInstruksi[1];
@@ -90,7 +91,6 @@ using UnityEngine;
             audioSource.clip = audioInstruksi[5];
             audioSource.Play();
             yield return new WaitForSeconds(audioSource.clip.length + 2);
-            //instruksi.text = "";
 
             instructionIsComplete = true;
     }
@@ -99,7 +99,7 @@ using UnityEngine;
         instruksi.text = "";
         yield return new WaitForSeconds(3);
 
-        anim[0].SetInteger("Kondisi", 1);
+        anim[0].SetInteger("Kondisi", 1); // menset karakter untuk melakukan animasi dengan kondisi 1 yang sudah disesuaikan dengan audio dan subtitle
         instruksi.text = kumpulanInstruksi[0];
         audioSource.clip = audioInstruksi[0];
         audioSource.Play();
@@ -197,7 +197,7 @@ using UnityEngine;
         instruksi.text = kumpulanInstruksi[7];
         audioSource.clip = audioInstruksi[7];
         audioSource.Play();
-       // btn[0].SetActive(true);
+       
 
     }
     private IEnumerator coTutorialInstruction3()
@@ -231,8 +231,7 @@ using UnityEngine;
     }
     private IEnumerator coHiddenObjectInstruction()
     {
-        //instruksi.text = "";
-        //title.text = "";
+
         
         instruksi.text = kumpulanInstruksi[0];
         audioSource.clip = audioInstruksi[0];
@@ -286,7 +285,7 @@ using UnityEngine;
         anim[0].SetInteger("Kondisi", 0);
         instruksi.text = "";
         instructionIsComplete = true;    
-        yield return new WaitForSeconds(45); //Tunggu Waktu sesuai timer
+        yield return new WaitForSeconds(45); //Tunggu Waktu sesuai timer. Waktu ini disesuaikan dengan waktu pengambilan darah
 
         anim[0].SetInteger("Kondisi", 6);
         instruksi.text = kumpulanInstruksi[5];

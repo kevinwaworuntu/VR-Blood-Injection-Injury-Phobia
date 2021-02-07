@@ -1,21 +1,61 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 using UnityEngine;
 
 public class DetectOnTrigger : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem visualEffect; // nanti hapus
+    //[SerializeField] private ParticleSystem visualEffect; // nanti hapus
     [SerializeField] private UnityEvent correctItem, wrongItem;
-    
+
     public static int itemIndex;
     public static int itemCollected;
-    
+
 
     public void OnTriggerEnter(Collider other)
     {
-        
-            if (other.gameObject.tag == "Item 1")
+        switch (other.gameObject.tag)
+        {
+            case ("Item 1"):
+                itemIndex = 1;
+                correctItem.Invoke();
+                itemCollected++;
+                break;
+            case ("Item 2"):
+                itemIndex = 2;
+                correctItem.Invoke();
+                itemCollected++;
+                break;
+            case ("Item 3"):
+                itemIndex = 3;
+                correctItem.Invoke();
+                itemCollected++;
+                break;
+            case ("Item 4"):
+                itemIndex = 4;
+                correctItem.Invoke();
+                itemCollected++;
+                break;
+            case ("Item 5"):
+                itemIndex = 5;
+                correctItem.Invoke();
+                itemCollected++;
+                break;
+            case ("Item 6"):
+                itemIndex = 6;
+                correctItem.Invoke();
+                itemCollected++;
+                break;
+            case ("Scene Change"):
+                itemIndex = 7;
+                correctItem.Invoke();
+                itemCollected = 0;
+                break;
+            case ("Toys"):
+                wrongItem.Invoke();
+                break;
+        }
+    }
+}      /*
+        if (other.gameObject.tag == "Item 1")
                 {
                     itemIndex = 1;
                     correctItem.Invoke();
@@ -62,13 +102,13 @@ public class DetectOnTrigger : MonoBehaviour
                 {
                     wrongItem.Invoke();
                 }
-           
+           */
     
-           
-    } // nanti dihapus
+      /*     
+     // nanti dihapus
     public void VisualEffect()
     {
         visualEffect.Play();
     }
+    */
 
-}

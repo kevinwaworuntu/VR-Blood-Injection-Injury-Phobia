@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
+// Class yang akan digunakan untuk menampung Image,Teks, GameObject, sprite dan audio clip yang akan digunakan di UI Instruksi
 public class UIManager : MonoBehaviour
 {
     public Image[] imageList;

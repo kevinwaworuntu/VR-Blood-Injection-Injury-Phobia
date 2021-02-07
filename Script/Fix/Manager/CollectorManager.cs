@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CollectorManager : MonoBehaviour
 {
@@ -12,13 +10,14 @@ public class CollectorManager : MonoBehaviour
     public UIManager uIManager;
     private int j = 0;
     protected static int itemCollected = 0, currItem = 0;
-    
+
+    //Posisi tas dan canvas instruksi di scene level 1
     public void CBPosLevel1()
     {
         itemCollected = DetectOnTrigger.itemCollected;
         if (iManager.instructionIsComplete == true)
         {
-
+            //Canvas Instruksi dan tas berpindah tempat jika instruksi awal sudah selesai
             if (itemCollected + j == 0)
             {
                 iManager.audioSource.clip = uIManager.itemAudio[0];
@@ -35,6 +34,7 @@ public class CollectorManager : MonoBehaviour
                 bagPosition.transform.Rotate(90f, 0, 133.068f);
                 j++;
             }
+            //Canvas instruksi dan tas berpindah ke tempat selanjutnya apabila 2 benda tersembunyi telah ditemukan
             else if (itemCollected + j == 3)
             {
                 iManager.audioSource.clip = uIManager.itemAudio[1];
@@ -52,6 +52,7 @@ public class CollectorManager : MonoBehaviour
                 bagPosition.transform.Rotate(90f, 0, 171.5f);
                 j++;
             }
+            //Canvas instruksi dan tas berpindah ke tempat selanjutnya apabila 2 benda tersembunyi telah ditemukan
             else if (itemCollected + j == 6)
             {
                 iManager.audioSource.clip = uIManager.itemAudio[2];
@@ -71,20 +72,14 @@ public class CollectorManager : MonoBehaviour
             }
         }
     }
+    //Posisi tas dan canvas instruksi di scene level 2
     public void CBPosLevel2()
     {
         itemCollected = DetectOnTrigger.itemCollected;
-        /*
-        canvasPosition.transform.position = new Vector3(0.101f, 1.712f, -7.973f);
-        //Reset Rotation to Zero
-        canvasPosition.transform.rotation = Quaternion.identity;
-        canvasPosition.transform.Rotate(0, 180, 0);
-        */
-        //bagPosition.SetActive(false);
 
         if (iManager.instructionIsComplete == true)
         {
-
+            //Canvas Instruksi dan tas berpindah tempat jika instruksi awal sudah selesai
             if (itemCollected + j == 0)
             {
                 iManager.audioSource.clip = uIManager.itemAudio[0];
@@ -102,10 +97,12 @@ public class CollectorManager : MonoBehaviour
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
                 bagPosition.transform.Rotate(90f, 180f, 70.25199f);
-                
+
 
                 j++;
             }
+
+            //Canvas instruksi dan tas berpindah ke tempat selanjutnya apabila 2 benda tersembunyi telah ditemukan
             else if (itemCollected + j == 3)
             {
                 iManager.audioSource.clip = uIManager.itemAudio[1];
@@ -118,23 +115,21 @@ public class CollectorManager : MonoBehaviour
                 //Reset Rotation to Zero
                 canvasPosition.transform.rotation = Quaternion.identity;
                 canvasPosition.transform.Rotate(0, -212.2f, 0);
-                /* canvasPosition.transform.position = new Vector3(-6.159f, 1.629f, -11.966f);
-                 //Reset Rotation to Zero
-                 canvasPosition.transform.rotation = Quaternion.identity;
-                 canvasPosition.transform.Rotate(0, -87.936f, 0);
-                 */
+
                 bagPosition.transform.position = new Vector3(-7.186f, 0.875f, -10.85f);
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
                 bagPosition.transform.Rotate(90f, 180, 105.48f);
-          
+
                 j++;
             }
+
+            //Canvas instruksi dan tas berpindah ke tempat selanjutnya apabila 2 benda tersembunyi telah ditemukan
             else if (itemCollected + j == 6)
             {
                 iManager.audioSource.clip = uIManager.itemAudio[2];
                 iManager.audioSource.Play();
-                
+
                 Destroy(teleportPointStatus[1]);
                 teleportPointStatus[2].SetActive(true);
                 canvasPosition.transform.position = new Vector3(-1.965f, 1.629f, -13.816f);
@@ -147,9 +142,11 @@ public class CollectorManager : MonoBehaviour
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
                 bagPosition.transform.Rotate(90, 180, 232.928f);
-   
+
                 j++;
             }
+
+            //Canvas instruksi dan tas berpindah ke tempat selanjutnya apabila 1 benda tersembunyi telah ditemukan
             else if (itemCollected + j == 8)
             {
                 iManager.audioSource.clip = uIManager.itemAudio[3];
@@ -167,29 +164,18 @@ public class CollectorManager : MonoBehaviour
                 //Reset Rotation to Zero
                 bagPosition.transform.rotation = Quaternion.identity;
                 bagPosition.transform.Rotate(90, 180, 312.246f);
-       
-                j++;
-            }/*
-            else if (itemCollected + j == 10)
-            {
-                Destroy(teleportPointStatus[4]);
-                teleportPointStatus[5].SetActive(true);
-                canvasPosition.transform.position = new Vector3(2.134f, 1.629f, -13.965f);
-                //Reset Rotation to Zero
-                canvasPosition.transform.rotation = Quaternion.identity;
-                canvasPosition.transform.Rotate(0, -180.48f, 0);
 
-                bagPosition.transform.position = new Vector3(2.771f, 0.854f, -13.298f);
-                //Reset Rotation to Zero
-                bagPosition.transform.rotation = Quaternion.identity;
-                bagPosition.transform.Rotate(90, 180, 232.928f);
                 j++;
-            }*/
+            }
         }
     }
+
+    //Posisi tas dan canvas instruksi di scene tutorial
     public void CBPosTutorial()
     {
         itemCollected = DetectOnTrigger.itemCollected;
+
+        //Canvas Instruksi dan tas berpindah tempat jika instruksi awal sudah selesai
         if (iManager.instructionIsComplete == true)
         {
             teleportPointStatus[0].SetActive(true);
