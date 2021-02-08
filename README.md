@@ -3,7 +3,7 @@
  >(Game VR Distraksi Pengambilan Darah untuk Anak 6-12 Tahun)
  
  # About The Project
- 
+ Video Demo (https://www.youtube.com/watch?v=-sSpKimJxIU)
  
  # Program Used
  - Unity v.2019.3.8f1
